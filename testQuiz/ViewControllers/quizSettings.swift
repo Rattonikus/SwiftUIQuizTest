@@ -11,10 +11,48 @@ import SwiftUI
 
 struct quizSettings: View 
 {
-    var body: some View 
+    @State var levels = LevelTracker.levelOn
+    @State private var testy = "0"
+    var body: some View
     {
-        Text("Coming soon")
+        NavigationStack
+        {
+            VStack
+            {
+                List
+                {
+                    Section(header: Text("Settings"))
+                    {
+                        Button("Reset Current Level", action: resetLevel )
+                    }
+                    Section(header: Text("Return"))
+                    {
+                        NavigationLink("Return to the main screen", destination: QuizHome().navigationBarBackButtonHidden(true))
+                    }
+                    Section(header: Text("Developer Options"))
+                    {
+                        TextField("Test", text: $testy)
+                            .keyboardType(.numberPad)
+                        Button("Set level", action: setLevel)
+                        Text("Testy is set to \(testy)")
+                        Text("Current level is set to \(levels)")
+                    }
+                }
+        }
+        }
     }
+    
+    func setLevel() -> Void
+    {
+        levels = Int(testy) ?? 0
+    }
+    
+    func resetLevel()
+    {
+        levels = 0
+    }
+    
+
 }
 
 #Preview 

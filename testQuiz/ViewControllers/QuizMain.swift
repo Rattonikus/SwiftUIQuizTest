@@ -16,6 +16,7 @@ struct QuizMain: View
     @State private var backgroundColor : Color = .gray
     @State private var gotWrong : Bool = false
     @State var levels = LevelTracker.self
+    @State private var gotRight : Bool = false
     
     var body: some View
     {
@@ -42,6 +43,11 @@ struct QuizMain: View
                     {
                         NavigationLink("Retry?", destination: QuizHome().navigationBarBackButtonHidden(true))
                     }
+                    
+                    if gotRight
+                    {
+                        NavigationLink("Next quiz", destination: QuizMain(questions: loadQuestions()[levels.levelOn]))
+                    }
             }
         }
         }
@@ -53,12 +59,19 @@ struct QuizMain: View
         {
             backgroundColor = .green
             levels.levelOn += 1
+            gotRight = true
         }
         else
         {
             gotWrong = true
             backgroundColor = .red
         }
+        
+        if levels.levelOn > 2
+        {
+            levels.levelOn = 0
+        }
+        
     }
 }
 

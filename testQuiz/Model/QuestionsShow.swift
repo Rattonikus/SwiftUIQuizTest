@@ -9,7 +9,7 @@ import Foundation
 
 struct LevelTracker
 {
-    static var levelOn = 0
+    static var levelOn = 2
 }
 
 
