@@ -14,23 +14,35 @@ struct QuizMain: View
 {
     @State var questions : QuestionsShow
     @State private var backgroundColor : Color = .gray
+    @State private var gotWrong : Bool = false
+    @State var levels = LevelTracker.self
     
     var body: some View
     {
-        ZStack 
+        NavigationStack
         {
-            backgroundColor
-                .ignoresSafeArea(.all)
-            VStack
+            ZStack
             {
-                
-                Text(questions.showQuestion)
-                
-                HStack
+                backgroundColor
+                    .ignoresSafeArea(.all)
+                VStack
                 {
-                    Button(questions.showAnswer, action: placeholderB)
-                }
-                
+                    
+                    Text(questions.showQuestion)
+                    
+                    HStack
+                    {
+                        Button(questions.showAnswer1, action: placeholderB)
+                        Button(questions.showAnswer2, action: placeholderB)
+                        Button(questions.showAnswer3, action: placeholderB)
+                        Button(questions.showAnswer4, action: placeholderB)
+                    }
+                    
+                    if gotWrong
+                    {
+                        NavigationLink("Retry?", destination: QuizHome().navigationBarBackButtonHidden(true))
+                    }
+            }
         }
         }
     }
@@ -40,9 +52,11 @@ struct QuizMain: View
         if questions.isTrue
         {
             backgroundColor = .green
+            levels.levelOn += 1
         }
         else
         {
+            gotWrong = true
             backgroundColor = .red
         }
     }
@@ -53,5 +67,5 @@ struct QuizMain: View
 
 #Preview
 {
-    QuizMain(questions: loadQuestions()[0])
+    QuizMain(questions: loadQuestions()[1])
 }

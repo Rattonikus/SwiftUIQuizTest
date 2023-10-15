@@ -10,6 +10,7 @@ import SwiftUI
 
 struct QuizHome: View
 {
+    @State var levels = LevelTracker.self
     var body: some View
     {
         NavigationStack
@@ -20,7 +21,9 @@ struct QuizHome: View
                     .underline()
                     .bold()
                 //Right now, this is placeholder until I properly implement the right way to call the proper quiz data. This will (eventually) lead to where it intends. 
-                Button("Click here to continue", action: ButtonValue)
+                NavigationLink("Click here to continue", destination: QuizMain(questions: loadQuestions()[levels.levelOn]) .navigationBarBackButtonHidden(true))
+                NavigationLink("Settings", destination: quizSettings())
+                
             }
         .padding()
         }

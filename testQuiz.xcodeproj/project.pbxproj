@@ -17,6 +17,7 @@
 		93949F572ACE8465009AC07E /* QuizQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93949F562ACE8465009AC07E /* QuizQuestions.swift */; };
 		93DA5EF92ADBD04300D3DCD8 /* QuizMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA5EF82ADBD04300D3DCD8 /* QuizMain.swift */; };
 		93DA5EFB2ADBD19700D3DCD8 /* QuestionsShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA5EFA2ADBD19700D3DCD8 /* QuestionsShow.swift */; };
+		93DA5EFD2ADBE19200D3DCD8 /* quizSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA5EFC2ADBE19200D3DCD8 /* quizSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		93949F562ACE8465009AC07E /* QuizQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestions.swift; sourceTree = "<group>"; };
 		93DA5EF82ADBD04300D3DCD8 /* QuizMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMain.swift; sourceTree = "<group>"; };
 		93DA5EFA2ADBD19700D3DCD8 /* QuestionsShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsShow.swift; sourceTree = "<group>"; };
+		93DA5EFC2ADBE19200D3DCD8 /* quizSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				93949F2B2ACE742F009AC07E /* QuizHome.swift */,
 				93DA5EF82ADBD04300D3DCD8 /* QuizMain.swift */,
+				93DA5EFC2ADBE19200D3DCD8 /* quizSettings.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93949F2C2ACE742F009AC07E /* QuizHome.swift in Sources */,
+				93DA5EFD2ADBE19200D3DCD8 /* quizSettings.swift in Sources */,
 				93DA5EFB2ADBD19700D3DCD8 /* QuestionsShow.swift in Sources */,
 				93949F572ACE8465009AC07E /* QuizQuestions.swift in Sources */,
 				93949F2A2ACE742F009AC07E /* testQuizApp.swift in Sources */,
