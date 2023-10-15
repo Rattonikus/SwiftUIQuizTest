@@ -25,4 +25,13 @@
  Music baybeeeee
  and much, much more. 
 
+ Ah fuck im just learning about the fun formatting of readme.md, enjoy reading. Just WAIT until i learn how to upload photos here, or when i am NOT tired. Maybe I should just start a fucking google doc and link it here, I think that would be a more easy approach to what im using this for, (Some kind of programming journey journal). Oh well, heres to adding more to that soon to come journal. You know what?
+
+
+ On the radar: 
+Google doc 
+
+
+There, now it's OFFICIAL. See you tomorrow.
+
  - ᘛ⁐̤ᕐᐷ
