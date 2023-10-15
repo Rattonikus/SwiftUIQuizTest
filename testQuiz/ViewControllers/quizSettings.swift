@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+//This is not a setting. Remove this if you see this. This is
+//a test of the github desktop commit system.
 
 struct quizSettings: View 
 {
