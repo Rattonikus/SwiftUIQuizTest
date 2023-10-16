@@ -12,7 +12,10 @@ import SwiftUI
 struct quizSettings: View 
 {
     @State var levels = LevelTracker.levelOn
+    @State var questions = QuestionsShow.self
     @State private var testy = "0"
+    @State var settings = SettingsStruct.self
+    @State var toggleDevSettings = 0
     var body: some View
     {
         NavigationStack
@@ -24,18 +27,26 @@ struct quizSettings: View
                     Section(header: Text("Settings"))
                     {
                         Button("Reset Current Level", action: resetLevel )
+                        Button("Toggle show level on", action: toggleLevelNumber)
+                        
                     }
                     Section(header: Text("Return"))
                     {
                         NavigationLink("Return to the main screen", destination: QuizHome().navigationBarBackButtonHidden(true))
                     }
-                    Section(header: Text("Developer Options"))
+                    if toggleDevSettings > 10
                     {
-                        TextField("Test", text: $testy)
-                            .keyboardType(.numberPad)
-                        Button("Set level", action: setLevel)
-                        Text("Testy is set to \(testy)")
-                        Text("Current level is set to \(levels)")
+                        Section(header: Text("Developer Options"))
+                        {
+                            TextField("Test", text: $testy)
+                                .keyboardType(.numberPad)
+                            Button("Set level", action: setLevel)
+                            Text("Testy is set to \(testy)")
+                            Text("Current level is set to \(levels)")
+                            Text("There are \(settings.questionsIndex) questions")
+                            
+                        }
+                        
                     }
                 }
         }
@@ -51,7 +62,19 @@ struct quizSettings: View
     {
         levels = 0
     }
-    
+    func toggleLevelNumber()
+    {
+        toggleDevSettings += 1
+        if SettingsStruct.enableShowNumber == false
+        {
+            SettingsStruct.enableShowNumber = true
+        }
+        else
+        {
+            SettingsStruct.enableShowNumber = false
+        }
+            
+    }
 
 }
 

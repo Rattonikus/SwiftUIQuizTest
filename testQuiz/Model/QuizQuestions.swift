@@ -11,6 +11,9 @@ import Foundation
 func loadQuestions() -> [QuestionsShow]
 {
     var showQuestions : [QuestionsShow] = []
+    var settingsSet : [SettingsStruct] = []
+    var numberOfQuestions : Int = 3
+    
     
     //These are the main attraction
     let mainQuestions : [String] =
@@ -48,18 +51,38 @@ func loadQuestions() -> [QuestionsShow]
         "c4",
     ]
     //the burning truth...
-    let truth : [Bool] =
+    let truth1 : [Bool] =
     [
         true,
+        false,
+        false
+    ]
+    let truth2 : [Bool] =
+    [
+        false,
+        true,
+        false
+    ]
+    let truth3 : [Bool] =
+    [
+        false,
+        false,
+        false
+    ]
+    let truth4 : [Bool] =
+    [
+        false,
         false,
         true
     ]
     
-    for index in 0..<3
+    for index in 0..<numberOfQuestions
     {
         //This line is starting to get LONG... perhaps theres a better way to do this? - Oct. 15 23' 
-        showQuestions.append(QuestionsShow(showQuestion: mainQuestions[index], showAnswer1: mainAnswers1[index], showAnswer2: mainAnswers2[index], showAnswer3: mainAnswers3[index], showAnswer4: mainAnswers4[index], isTrue: truth[index]))
+        showQuestions.append(QuestionsShow(showQuestion: mainQuestions[index], showAnswer1: mainAnswers1[index], showAnswer2: mainAnswers2[index], showAnswer3: mainAnswers3[index], showAnswer4: mainAnswers4[index], answer1key: truth1[index], answer2key: truth2[index], answer3key: truth3[index], answer4key: truth4[index]))
     }
+
+    
     
     
     
