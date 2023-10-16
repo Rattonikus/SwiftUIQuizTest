@@ -16,7 +16,7 @@ struct LevelTracker
 
 struct SettingsStruct
 {
-    static var enableShowNumber = false
+    static var enableShowNumber = true
     static var questionsIndex = howManyLevels
 
 

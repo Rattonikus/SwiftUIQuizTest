@@ -17,6 +17,7 @@ struct QuizMain: View
     @State private var gotWrong : Bool = false
     @State var levels = LevelTracker.self
     @State private var gotRight : Bool = false
+    @State var settings = SettingsStruct.self
     
     var body: some View
     {
@@ -28,6 +29,10 @@ struct QuizMain: View
                     .ignoresSafeArea(.all)
                 VStack
                 {
+                    if settings.enableShowNumber
+                    {
+                        Text("\(levels.levelOn) of \(settings.questionsIndex)")
+                    }
                     
                     Text(questions.showQuestion)
                     

@@ -34,7 +34,7 @@ struct quizSettings: View
                     {
                         NavigationLink("Return to the main screen", destination: QuizHome().navigationBarBackButtonHidden(true))
                     }
-                    if toggleDevSettings > 10
+                    if toggleDevSettings > 9
                     {
                         Section(header: Text("Developer Options"))
                         {

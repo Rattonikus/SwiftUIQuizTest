@@ -11,6 +11,7 @@ import SwiftUI
 struct QuizHome: View
 {
     @State var levels = LevelTracker.self
+    
     var body: some View
     {
         NavigationStack
