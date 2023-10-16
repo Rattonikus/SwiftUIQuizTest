@@ -16,6 +16,12 @@
  Added a level tracker
  Added a settings button
 
+
+Commit on Oct. 15 23' 1:55 PM:
+Added settings with dev options 
+Added fixx to index out of bounds 
+
+
  On the Radar: 
  A level selector
  Custom level creation
