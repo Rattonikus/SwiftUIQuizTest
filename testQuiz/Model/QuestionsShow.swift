@@ -7,13 +7,17 @@
 
 import Foundation
 
+//This will be able to be changed in future updates. On scope with the level editor/creator
 var howManyLevels = 3
 
+
+//This is a lonely struct, holds soley the levelOn value. Maybe I could attach it to another struct?
 struct LevelTracker
 {
     static var levelOn = 2
 }
 
+//This will be read primarilly by the settings view
 struct SettingsStruct
 {
     static var enableShowNumber = true
@@ -22,7 +26,7 @@ struct SettingsStruct
 
 }
 
-
+//This is the important data, it's used by the main view. 
 struct QuestionsShow
 {
     let questionIndex = howManyLevels

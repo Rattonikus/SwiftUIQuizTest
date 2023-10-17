@@ -23,6 +23,7 @@ func loadQuestions() -> [QuestionsShow]
         "C"
     ]
     //These are the answers, in an array
+    //These will be edited... one day.
     let mainAnswers1 : [String] =
     [
         "a1",
@@ -51,6 +52,7 @@ func loadQuestions() -> [QuestionsShow]
         "c4",
     ]
     //the burning truth...
+    //Truth1-4 should ONLY be chnaged in coordination wth answers1-4
     let truth1 : [Bool] =
     [
         true,
@@ -76,15 +78,13 @@ func loadQuestions() -> [QuestionsShow]
         true
     ]
     
+    
+    //This appends the following data to the QuestionsShow file 
     for index in 0..<numberOfQuestions
     {
         //This line is starting to get LONG... perhaps theres a better way to do this? - Oct. 15 23' 
         showQuestions.append(QuestionsShow(showQuestion: mainQuestions[index], showAnswer1: mainAnswers1[index], showAnswer2: mainAnswers2[index], showAnswer3: mainAnswers3[index], showAnswer4: mainAnswers4[index], answer1key: truth1[index], answer2key: truth2[index], answer3key: truth3[index], answer4key: truth4[index]))
     }
-
-    
-    
-    
     
     return showQuestions
 }
