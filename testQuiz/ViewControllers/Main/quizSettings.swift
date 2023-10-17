@@ -44,6 +44,7 @@ struct quizSettings: View
                             Text("Testy is set to \(testy)")
                             Text("Current level is set to \(levels)")
                             Text("There are \(settings.questionsIndex) questions")
+                            NavigationLink("Custom Quiz Creator. UNFINSIHED", destination: CustomQuizCreator())
                             
                         }
                         

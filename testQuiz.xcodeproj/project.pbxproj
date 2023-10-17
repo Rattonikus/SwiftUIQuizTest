@@ -144,8 +144,8 @@
 		93949F532ACE841E009AC07E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				93D4F5A82ADE1D30004C3F90 /* MMain */,
-				93D4F5A62ADE1980004C3F90 /* CustomQuizCreator.swift */,
+				93D4F5A82ADE1D30004C3F90 /* Main */,
+				93D4F5A92ADE1DC7004C3F90 /* Custom */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				93D4F59E2ADE18BF004C3F90 /* Custom Level */,
-				93D4F5A32ADE18ED004C3F90 /* CMain Quiz */,
+				93D4F5A32ADE18ED004C3F90 /* Main Quiz */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,23 +177,31 @@
 			path = "Custom Level";
 			sourceTree = "<group>";
 		};
-		93D4F5A32ADE18ED004C3F90 /* CMain Quiz */ = {
+		93D4F5A32ADE18ED004C3F90 /* Main Quiz */ = {
 			isa = PBXGroup;
 			children = (
 				93949F562ACE8465009AC07E /* QuizQuestions.swift */,
 				93DA5EFA2ADBD19700D3DCD8 /* QuestionsShow.swift */,
 			);
-			path = "CMain Quiz";
+			path = "Main Quiz";
 			sourceTree = "<group>";
 		};
-		93D4F5A82ADE1D30004C3F90 /* MMain */ = {
+		93D4F5A82ADE1D30004C3F90 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				93949F2B2ACE742F009AC07E /* QuizHome.swift */,
 				93DA5EF82ADBD04300D3DCD8 /* QuizMain.swift */,
 				93DA5EFC2ADBE19200D3DCD8 /* quizSettings.swift */,
 			);
-			path = MMain;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		93D4F5A92ADE1DC7004C3F90 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				93D4F5A62ADE1980004C3F90 /* CustomQuizCreator.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
